@@ -10,7 +10,7 @@ function Input(props) {
     const [data, setData] = useState('')
     const [inputData, setInputData] = useState('')
     const [cache, setCache] = useState('')
-    const TOKEN = "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"
+    const TOKEN = "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"
     const get = (nick) => {
         let a = "https://api.github.com/search/users?q=" + nick
         fetch(a, { 
