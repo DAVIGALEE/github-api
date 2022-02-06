@@ -16,7 +16,7 @@ function Input(props) {
             method:'get',
             headers: {
             'Content-Type': 'application/json',
-            "Authorization":"token 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",
+            "Authorization":"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",
             'User-Agent': 'request',
             "Accept": "application/vnd.github.v3+json",
           }})
