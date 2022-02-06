@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from "react";
 import Darkmode from "./toggler";
 import ReactDOM from 'react-dom'
-// import env from 'dotenv'
+//z import env from 'dotenv'
 import "../style.css"
 
 function Input(props) {
-    // const config = env.config({path:"../../.env"})
+     
+    console.log(process.env)
     const [data, setData] = useState('')
     const [inputData, setInputData] = useState('')
     const [cache, setCache] = useState('')
-    const TOKEN = "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"
+    const TOKEN = process.env.REACT_APP_KEY
     const get = (nick) => {
         let a = "https://api.github.com/search/users?q=" + nick
         fetch(a, { 
@@ -66,7 +67,7 @@ function Input(props) {
     })
     return (
         <>
-            <input className="input" placeholder="Search" maxlength="15" onChange={e => {setInputData(e.target.value)} }></input>
+            <input className="input" placeholder="Search" maxLength="15" onChange={e => {setInputData(e.target.value)} }></input>
             {/* <button onClick={butt} >click</button> */}
             <Darkmode></Darkmode>
             <Profile></Profile>
