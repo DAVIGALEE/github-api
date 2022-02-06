@@ -8,13 +8,15 @@ function Input(props) {
     const [data, setData] = useState('')
     const [inputData, setInputData] = useState('')
     const [cache, setCache] = useState('')
-    const TOKEN = "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"
+    // const TOKEN = "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"
     const get = (nick) => {
-        let a = "https://api.github.com/search/users?q=" + nick
-        fetch(a, { 
+        // let a = "https://api.github.com/search/users?q=" + nick
+        const auth_token = "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"
+        fetch("https://api.github.com/search/users?q=" + nick, { 
             method:'get',
             headers: {
-            "Authorization": TOKEN,
+            'Content-Type': 'application/json',
+            "Authorization":"token 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",
             'User-Agent': 'request',
             "Accept": "application/vnd.github.v3+json",
           }})
