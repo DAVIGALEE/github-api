@@ -1,7 +1,7 @@
 {
     "headers": [
       {
-        "source": "/api/(.*)",
+        "source": "REACT_APP_KEY",
         "headers": [
           { "key": "Access-Control-Allow-Credentials", "value": "true" },
           { "key": "Access-Control-Allow-Origin", "value": "*" },
