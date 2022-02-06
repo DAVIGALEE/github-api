@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom'
 import "../style.css"
 
 function Input(props) {
-     
-    console.log(process.env)
     const [data, setData] = useState('')
     const [inputData, setInputData] = useState('')
     const [cache, setCache] = useState('')
@@ -16,7 +14,7 @@ function Input(props) {
         fetch(a, { 
             method:'get',
             headers: {
-            "Authorization": "token " + TOKEN,
+            "Authorization": TOKEN,
             'User-Agent': 'request',
             "Accept": "application/vnd.github.v3+json",
           }})
