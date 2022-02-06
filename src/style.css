@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+  }
+  :root{
+      --black:rgb(21, 22, 24);
+      --white: rgb(236, 236, 236);
+  }
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--background-color);
+    color:var(--text-color);
+    font-weight: var(--font-weight);
+    transition:background .3s ease-in-out,color .6s ease-in-out;
+}
+body.light{
+    --background-color:var(--white);
+    --text-color:var(--black);
+    --font-weight:400;
+    --border-color: var(--black);
+    
+}
+body.dark{
+    --background-color:var(--black);
+    --text-color:var(--white);  
+    --border-color: var(--white);
+    --font-weight:500;
+    
+}
+.imgprofile {
+    border-radius: 10px;
+    transition:  2s ease;
+    position:sticky;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(216, 216, 216);  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.input{
+    outline: blue;
+    background-color: var(--background-color);
+    padding:5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:2px solid var(--border-color);
+    transition: border .35s ease;
+    position: relative; 
+    left:14%; 
+    margin-left: 32%;
+    margin-top: 30px;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    transition: .05s ease-in;
+    color:var(--text-color);
+}
+.input:focus{
+    border-bottom:4px solid var(--border-color);
+    border-radius: 1px;
+    transition: border .35s ease;
+}
+.links{
+    text-decoration: none;
+}
+.parentBlocks{
+    margin-right: 15in;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    margin-top: 0.5in;
+    padding-left: 0px;
+    transition: 1s ease;
+}
+.parentBlocks:hover{
+    width:10%;
+}
+.data{
+  text-align: center;
+}
+#darkMode{
+    position:fixed;
+    background:transparent url("./components/moon.png") no-repeat center;
+    background-size:30px 30px;
+    width:40px;
+    height:40px;
+    filter:grayscale(100%); 
+    border:none;
+    border-radius:50%;
+    left:11px;
+    transition: background-color 0.3s ease-in-out,filter 0.3s ease-in-out;
+}
+ #darkMode:hover{
+    filter:none;
+    background-color:black;
+    cursor: pointer;
+}
+#darkMode.notclicked{
+background-color: antiquewhite;
+filter:grayscale(100%);
+}
+#darkMode.clicked{
+    filter:none !important; 
+    background-color: black;
+} 
+@media only screen and (max-width: 1500px) {
+    
+    .input{
+        transition: .3s ease-in;
+        position:relative;
+        left:11.5%;  
+    }
+    
+}
+@media only screen and (max-width: 1024px) {
+    .imgprofile {
+      width: 60px;
+      height:60px;
+    }
+    .data{
+        word-break: break-all;
+    }
+    .input{
+        transition: .3s ease-in;
+        width:50px;   
+        position:relative;
+        left:15%;  
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .imgprofile {
+      width: 60px;
+      height:60px;
+    }
+    .data{
+        word-break: break-all;
+    }
+    .input{
+        transition: .3s ease-in;
+        width:60px;   
+        position:relative;
+        left:11%;  
+    }
+    
+}
+@media only screen and(max-width:1024){
+    .data{
+        position:absolute;
+        word-wrap: break-word;
+    }
+    .parentBlocks{
+        padding-right:50px;
+    }
+    .parentBlocks:hover{
+        width:11%;
+    }
+    .imgprofile {
+      width: 50px;
+      height:50px;
+    }  
+}
+/* @media only screen and (max-width: 301px) {
+    .data{
+        position:absolute;
+        word-wrap: break-word;
+    }
+    .parentBlocks{
+        padding-right:50px;
+    }
+    .parentBlocks:hover{
+        width:11%;
+    }
+    .imgprofile {
+      width: 50px;
+      height:50px;
+    }  
+} */
+
+@media only screen and (max-width: 400px) {
+    #darkMode.clicked{
+        filter:none;
+        /* background-color:black; */
+        cursor: pointer;
+    }
+    #darkMode{
+        width:30px;
+        height:30px;
+        background-size:20px 20px;
+    }
+    .input{
+        position:relative;
+        margin-bottom: 50px;
+        margin-right:1in;
+        left:15%;
+        bottom:20%;
+    }
+    .parentBlocks{
+        position: inherit;
+        display:table-row-group;
+       
+    }
+}
