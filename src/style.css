@@ -76,9 +76,7 @@ body.dark{
     padding-left: 0px;
     transition: 1s ease;
 }
-.parentBlocks:hover{
-    width:10%;
-}
+
 .data{
   text-align: center;
 }
@@ -107,8 +105,10 @@ filter:grayscale(100%);
     filter:none !important; 
     background-color: black;
 } 
-@media only screen and (max-width: 1500px) {
-    
+@media only screen and (min-width: 1000px) {
+    .parentBlocks:hover{
+        width:10%;
+    }
     .input{
         transition: .3s ease-in;
         position:relative;
@@ -116,7 +116,7 @@ filter:grayscale(100%);
     }
     
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
     .imgprofile {
       width: 60px;
       height:60px;
@@ -137,9 +137,9 @@ filter:grayscale(100%);
       width: 60px;
       height:60px;
     }
-    .data{
+    /* .data{
         word-break: break-all;
-    }
+    } */
     .input{
         transition: .3s ease-in;
         width:60px;   
@@ -150,7 +150,8 @@ filter:grayscale(100%);
 }
 @media only screen and(max-width:1024){
     .data{
-        position:absolute;
+        position:relative;
+        top:200px;
         word-wrap: break-word;
     }
     .parentBlocks{
@@ -179,9 +180,20 @@ filter:grayscale(100%);
       width: 50px;
       height:50px;
     }  
-} */
+ } */
 
+@media only screen and (max-width:401px){
+    .imgprofile{
+        height:40px;
+        width:40px;
+    }
+    /* data{
+        position:relative;
+        top:2in;
+    } */
+}
 @media only screen and (max-width: 400px) {
+    
     #darkMode.clicked{
         filter:none;
         /* background-color:black; */
